@@ -130,7 +130,7 @@ fn initialize_chain_and_contract() -> (Chain, ContractAddress) {
 
     // Load and deploy the module.
     let module = module_load_v1("dist/module.wasm.v1").expect("Module exists");
-   
+    let deployment = chain.module_deploy_v1(SIGNER, ALICE, module).expect("Deploy valid module");
     
     let init = chain
         .contract_init(SIGNER, ALICE, Energy::from(10000), InitContractPayload {
