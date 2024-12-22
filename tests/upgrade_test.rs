@@ -152,12 +152,7 @@ fn initialize_chain_and_contract() -> (Chain, ContractAddress) {
     };
 
     chain
-        .contract_update(SIGNER, ALICE, ALICE_ADDR, Energy::from(10000), UpdateContractPayload {
-            amount:       Amount::zero(),
-            receive_name: OwnedReceiveName::new_unchecked("euroe_stablecoin.grantRole".to_string()),
-            address:      init.contract_address,
-            message:      OwnedParameter::from_serial(&roles).expect("Grant roles"),
-        })
+     
         .expect("Grant roles");
 
     (chain, init.contract_address)
