@@ -20,7 +20,6 @@ const BOB_ADDR: Address = Address::Account(BOB);
 
 const CHARLIE: AccountAddress = AccountAddress([2u8; 32]);
 
-
 const MINT_ACCOUNT: AccountAddress = AccountAddress([2; 32]);
 const MINT_ADDRESS_ROLE: Address = Address::Account(MINT_ACCOUNT);
 
